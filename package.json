@@ -1,0 +1,25 @@
+{
+  "name": "mis-project",
+  "version": "1.0.0",
+  "description": "MIS project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubenvanspringel/mis-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rubenvanspringel/mis-project/issues"
+  },
+  "homepage": "https://github.com/rubenvanspringel/mis-project#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "vue": "^2.5.10",
+    "vue-resource": "^1.3.4"
+  }
+}

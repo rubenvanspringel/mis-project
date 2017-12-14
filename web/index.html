@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="scripts/vue/dist/vue.js"></script>
+    <script src="scripts/vue-resource/dist/vue-resource.js"></script>
+    <script src="scripts/jquery/dist/jquery.min.js"></script>
+    <script src="web/js/InitPages.js"></script>
+</head>
+<body>
+    <div id="app">
+        <component v-bind:is="currentPage"></component>
+    </div>
+</body>
+
+<!-- Vue Pages -->
+<script src="web/pages/HomePage.js"></script>
+
+<!-- Vue Components -->
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            currentPage: "homepage"
+        },
+        mounted: function(){
+        },
+        components: {
+            homepage: Pages.HomePage
+        }
+    });
+</script>
+</html>
