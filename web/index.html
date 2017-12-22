@@ -3,22 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    
+    <link rel="stylesheet" href="scripts/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="scripts/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="web/css/AdminLTE.css" />
+    <link rel="stylesheet" href="web/css/_all-skins.css" />
 
     <script src="scripts/vue/dist/vue.js"></script>
     <script src="scripts/vue-resource/dist/vue-resource.js"></script>
     <script src="scripts/jquery/dist/jquery.min.js"></script>
+    <script src="web/js/adminlte.js"></script>
     <script src="web/js/InitPages.js"></script>
 </head>
-<body>
-    <div id="app">
+<body class="skin-blue-light fixed">
+    <div id="app" class="wrapper">
+        <menu-component></menu-component>
+        <sidebar-component></sidebar-component>
         <component v-bind:is="currentPage"></component>
     </div>
 </body>
 
 <!-- Vue Pages -->
 <script src="web/pages/HomePage.js"></script>
+<script src="web/pages/PersonalPage.js"></script>
+<script src="web/pages/AllergiesPage.js"></script>
 
 <!-- Vue Components -->
+<script src="web/components/MenuComponent.js"></script>
+<script src="web/components/SidebarComponent.js"></script>
 
 <script>
     var app = new Vue({
@@ -29,7 +41,9 @@
         mounted: function(){
         },
         components: {
-            homepage: Pages.HomePage
+            homepage: Pages.HomePage,
+            personal: Pages.PersonalPage,
+            allergies: Pages.AllergiesPage
         }
     });
 </script>

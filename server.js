@@ -4,7 +4,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 app.use('/scripts', express.static(__dirname + '/node_modules/'));
-app.use('/web', express.static(__dirname + '/web'));
+app.use('/web', express.static(__dirname + '/web/'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

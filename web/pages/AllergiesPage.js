@@ -1,7 +1,7 @@
-Pages.HomePage = {
+Pages.AllergiesPage = {
     template: `
 <div class="content-wrapper">
-    Hello :)
+    Allergies
 </div>
 `
     , data: function () {

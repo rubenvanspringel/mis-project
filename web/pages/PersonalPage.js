@@ -1,7 +1,7 @@
-Pages.HomePage = {
+Pages.PersonalPage = {
     template: `
 <div class="content-wrapper">
-    Hello :)
+    Personal
 </div>
 `
     , data: function () {
