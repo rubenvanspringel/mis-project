@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="scripts/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="web/css/AdminLTE.css" />
     <link rel="stylesheet" href="web/css/_all-skins.css" />
+    <link rel="stylesheet" href="web/css/custom.css" />
 
     <script src="scripts/vue/dist/vue.js"></script>
     <script src="scripts/vue-resource/dist/vue-resource.js"></script>
@@ -27,6 +28,9 @@
 <script src="web/pages/HomePage.js"></script>
 <script src="web/pages/PersonalPage.js"></script>
 <script src="web/pages/AllergiesPage.js"></script>
+<script src="web/pages/HistoryPage.js"></script>
+<script src="web/pages/FilesPage.js"></script>
+<script src="web/pages/FilePage.js"></script>
 
 <!-- Vue Components -->
 <script src="web/components/MenuComponent.js"></script>
@@ -43,7 +47,10 @@
         components: {
             homepage: Pages.HomePage,
             personal: Pages.PersonalPage,
-            allergies: Pages.AllergiesPage
+            allergies: Pages.AllergiesPage,
+            history: Pages.HistoryPage,
+            files: Pages.FilesPage,
+            file: Pages.FilePage
         }
     });
 </script>

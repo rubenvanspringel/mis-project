@@ -5,8 +5,20 @@ Vue.component('sidebar-component', {
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MENU</li>
-            <li id="PersonalListItem" class="active" v-on:click="goToPersonal"><a href="javascript:void(0)"><i class="fa fa-tachometer"></i> <span>Persoonlijk</span></a></li>
-            <li id="AllergiesListItem" v-on:click="goToAllergies"><a href="javascript:void(0)"><i class="fa fa-tachometer"></i> <span>Allergieën</span></a></li>
+            <li id="PersonalListItem" class="treeview active" v-on:click="goToPersonal">
+                <a href="javascript:void(0)"><i class="fa fa-tachometer"></i>
+                    <span>Persoonlijk</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="AllergiesListItem" v-on:click.stop="goToAllergies"><a href="javascript:void(0)"><i class="fa fa-tachometer"></i> <span>Allergieën</span></a></li>        
+                </ul>
+            </li>
+            
+            <li id="FilesListItem" v-on:click="goToFiles"><a href="javascript:void(0)"><i class="fa fa-tachometer"></i> <span>Dossiers</span></a></li>
+            <li id="LogoutListItem" v-on:click="logout"><a href="javascript:void(0)"><i class="fa fa-tachometer"></i> <span>Uitloggen</span></a></li>
         </ul>
     </section>
 </aside>
@@ -24,9 +36,15 @@ Vue.component('sidebar-component', {
             Pages.goToPage("personal");
         },
         goToAllergies: function(){
-            $('li').removeClass('active');
-            $('#AllergiesListItem').addClass('active');
             Pages.goToPage("allergies");
+        },
+        goToFiles: function(){
+            $('li').removeClass('active');
+            $('#FilesListItem').addClass('active');
+            Pages.goToPage("files");
+        },
+        logout: function(){
+            
         }
     }
 });
