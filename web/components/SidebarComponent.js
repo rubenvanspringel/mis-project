@@ -19,17 +19,20 @@ Vue.component('sidebar-component', {
                 </ul>
             </li>
 
-            <li id="FilesListItem" v-on:click="goToFiles"><a href="javascript:void(0)"><i class="fa fa-tachometer"></i> <span>Dossiers</span></a></li>
+            <li v-if="!isDoctor" id="FilesListItem" v-on:click="goToFiles"><a href="javascript:void(0)"><i class="fa fa-tachometer"></i> <span>Dossiers</span></a></li>
+            <li v-else id="PatientsListItem" v-on:click="goToPatients"><a href="javascript:void(0)"><i class="fa fa-address-book-o"></i> <span>Patiënten</span></a></li>
             <li id="LogoutListItem" v-on:click="logout"><a href="javascript:void(0)"><i class="fa fa-tachometer"></i> <span>Uitloggen</span></a></li>
         </ul>
     </section>
 </aside>
 `,
     data: function(){
-        return {};
+        return {
+            isDoctor: false
+        };
     },
     mounted: function(){
-
+        this.isDoctor = Authorization.me.doctor;
     },
     methods: {
         goToPersonal: function(){
@@ -48,8 +51,13 @@ Vue.component('sidebar-component', {
             $('#FilesListItem').addClass('active');
             Pages.goToPage("files");
         },
+        goToPatients: function(){
+            $('li').removeClass('active');
+            $('#PatientsListItem').addClass('active');
+            Pages.goToPage("patients");
+        },
         logout: function(){
-
+            Authorization.logout();
         }
     }
 });

@@ -17,11 +17,12 @@
     <script src="scripts/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
     <script src="web/js/adminlte.js"></script>
     <script src="web/js/InitPages.js"></script>
+    <script src="web/js/Authorization.js"></script>
 </head>
-<body class="skin-blue-light fixed">
+<body>
     <div id="app" class="wrapper">
-        <menu-component></menu-component>
-        <sidebar-component></sidebar-component>
+        <menu-component v-if="currentPage !== 'login'"></menu-component>
+        <sidebar-component v-if="currentPage !== 'login'"></sidebar-component>
         <component v-bind:is="currentPage"></component>
     </div>
 </body>
@@ -33,18 +34,21 @@
 <script src="web/pages/InentingenPage.js"></script>
 <script src="web/pages/HistoryPage.js"></script>
 <script src="web/pages/FilesPage.js"></script>
-<script src="web/pages/FilePage.js"></script>
+<script src="web/pages/LoginPage.js"></script>
+<script src="web/pages/PatientsPage.js"></script>
 
 <!-- Vue Components -->
 <script src="web/components/MenuComponent.js"></script>
 <script src="web/components/SidebarComponent.js"></script>
 <script src="web/components/BoxieComponent.js"></script>
+<script src="web/components/FileListItemComponent.js"></script>
+<script src="web/components/PatientListItemComponent.js"></script>
 
 <script>
     var app = new Vue({
         el: '#app',
         data: {
-            currentPage: "homepage"
+            currentPage: "login"
         },
         mounted: function(){
         },
@@ -56,6 +60,8 @@
             files: Pages.FilesPage,
             inentingen: Pages.InentingenPage,
             file: Pages.FilePage
+            login: Pages.LoginPage,
+            patients: Pages.PatientsPage
         }
     });
 </script>
