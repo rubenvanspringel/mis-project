@@ -6,17 +6,14 @@ Pages.FilesPage = {
     </section>
     <section class="content">
         <div class="row">
-            <div class="col-lg-12 col-xs-12">
-                <div class="box box-primary clickable" v-on:click="goToFile">
+            <div class="col-lg-12 col-xs-12" v-for="group in filesPerYear">
+                <div class="box box-success clickable" v-on:click="toggleFiles(group.year)">
                     <div class="box-header">
-                        <h3 class="box-title">Griep</h3>
+                        <h3 class="box-title">{{group.year}}</h3>
                     </div>
                 </div>
-                
-                <div class="box box-primary clickable">
-                    <div class="box-header">
-                        <h3 class="box-title">Longontsteking</h3>
-                    </div>
+                <div :data-year="group.year">
+                    <file-listitem-component v-for="file in group.files" v-bind:file="file"></file-listitem-component>
                 </div>
             </div>
         </div>
@@ -24,12 +21,14 @@ Pages.FilesPage = {
 </div>
 `
     , data: function () {
-        return {};
+        return {
+            filesPerYear: [{year: 2017, files: [{name: "Griep"}, {name: "Longontsteking"}]}, {year: 2016, files: [{name: "Pijn Schouder"}]}]
+        };
     }, mounted: function () {
         $(window).trigger('resize');
     }, methods:{
-        goToFile: function(){
-            Pages.goToPage("file");
+        toggleFiles: function(year){
+            $("[data-year='" + year + "']").toggle();
         }
     }
 };
