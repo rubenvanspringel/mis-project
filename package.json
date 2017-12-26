@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/rubenvanspringel/mis-project#readme",
   "dependencies": {
+    "b": "^2.0.1",
+    "bootstrap": "^3.3.7",
     "express": "^4.16.2",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "vue": "^2.5.10",
     "vue-resource": "^1.3.4"
