@@ -4,63 +4,39 @@ Pages.HistoryPage = {
     <div class="row">
         <div class="col-xs-12 col-lg-12">
             <ul class="timeline">
-
-                <li class="time-label">
-                    <span class="bg-red">
-                        10 Feb. 2014
-                    </span>
-                </li>
-            
-                <li>
-                    <i class="fa fa-envelope bg-blue"></i>
-                    <div class="timeline-item">
-                        <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
-            
-                        <h3 class="timeline-header"><a href="#">Dokter 1</a> ...</h3>
-            
-                        <div class="timeline-body">
-                            ...
-                            bla bla aanpassing
-                        </div>
-            
-                        <div class="timeline-footer">
-                            <a class="btn btn-primary btn-xs">...</a>
-                        </div>
-                    </div>
-                </li>
+                <template v-for="edit in history">
+                    <li class="time-label">
+                        <span class="bg-red">
+                            {{edit.editDate}}
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope bg-blue"></i>
+                        <div class="timeline-item">
+                            <span class="time"><i class="fa fa-clock-o"></i>{{edit.editTime}}</span>
                 
-                <li class="time-label">
-                    <span class="bg-red">
-                        10 Feb. 2014
-                    </span>
-                </li>
-            
-                <li>
-                    <i class="fa fa-envelope bg-blue"></i>
-                    <div class="timeline-item">
-                        <span class="time"><i class="fa fa-clock-o"></i> 17:05</span>
-            
-                        <h3 class="timeline-header"><a href="#">Dokter 2</a> ...</h3>
-            
-                        <div class="timeline-body">
-                            ...
-                            bla bla aanpassing
+                            <h3 class="timeline-header"><a href="#">{{edit.editBy}}</a></h3>
+                
+                            <div class="timeline-body">
+                                <p v-for="change in edit.changes">
+                                    {{change.type}}: {{change.content}}
+                                </p>
+                            </div>
                         </div>
-            
-                        <div class="timeline-footer">
-                            <a class="btn btn-primary btn-xs">...</a>
-                        </div>
-                    </div>
-                </li>
-        
+                    </li>
+                </template>
             </ul>
         </div>
     </div>
 </div>
 `
     , data: function () {
-        return {};
+        return {
+            history: null
+        };
     }, mounted: function () {
+        this.history = Pages.state.history;
+        
         $(window).trigger('resize');
     }
 };

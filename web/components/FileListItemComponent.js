@@ -2,7 +2,7 @@ Vue.component('file-listitem-component', {
     template: `
 <div class="box box-primary clickable" v-on:click="goToFile">
     <div class="box-header">
-        <h3 class="box-title">{{file.name}}</h3>
+        <h3 class="box-title">{{file.title}}</h3>
     </div>
 </div>
 `,
@@ -17,7 +17,7 @@ Vue.component('file-listitem-component', {
     },
     methods: {
         goToFile: function(){
-            Pages.goToPage("file");
+            Pages.goToPage("file", {file: this.file});
         }
     }
 });

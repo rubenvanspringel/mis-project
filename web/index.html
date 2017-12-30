@@ -34,8 +34,10 @@
 <script src="web/pages/InentingenPage.js"></script>
 <script src="web/pages/HistoryPage.js"></script>
 <script src="web/pages/FilesPage.js"></script>
+<script src="web/pages/FilePage.js"></script>
 <script src="web/pages/LoginPage.js"></script>
 <script src="web/pages/PatientsPage.js"></script>
+<script src="web/pages/PatientPage.js"></script>
 
 <!-- Vue Components -->
 <script src="web/components/MenuComponent.js"></script>
@@ -43,6 +45,9 @@
 <script src="web/components/BoxieComponent.js"></script>
 <script src="web/components/FileListItemComponent.js"></script>
 <script src="web/components/PatientListItemComponent.js"></script>
+<script src="web/components/FilesListComponent.js"></script>
+<script src="web/components/SmallPatientInfoComponent.js"></script>
+<script src="web/components/HistoryComponent.js"></script>
 
 <script>
     var app = new Vue({
@@ -59,9 +64,10 @@
             history: Pages.HistoryPage,
             files: Pages.FilesPage,
             inentingen: Pages.InentingenPage,
-            file: Pages.FilePage
+            file: Pages.FilePage,
             login: Pages.LoginPage,
-            patients: Pages.PatientsPage
+            patients: Pages.PatientsPage,
+            patient: Pages.PatientPage
         }
     });
 </script>
