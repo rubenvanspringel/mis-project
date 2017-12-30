@@ -67,6 +67,13 @@ Pages.FilePage = {
                         <div class="row">
                             <div class="col-ls-12 col-xs-12">
                                 <div class="form-group">
+                                    <button class="btn btn-primary btn-flat" @click="newConsult">Nieuwe Consultatie</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-ls-12 col-xs-12">
+                                <div class="form-group">
                                   <label>Notities</label>
                                   <textarea class="form-control" rows="5" placeholder="Notities ..."></textarea>
                                 </div>
@@ -99,6 +106,8 @@ Pages.FilePage = {
             $(window).trigger('resize');
         }, 100);
     }, methods:{
-        
+        newConsult: function(){
+            Pages.goToPage("consult");
+        }
     }
 };
