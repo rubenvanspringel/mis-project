@@ -65,13 +65,13 @@ Pages.PersonalPage = {
 `
     , data: function () {
         return {
-            firstName: "",
-            lastName: "",
-            telephoneNumber: "",
-            email: "",
-            socialSecurityNumber: "",
-            birthDate: "",
-            gender: ""
+            firstName: Authorization.me.firstName,
+            lastName: Authorization.me.lastName,
+            telephoneNumber: Authorization.me.telephoneNumber,
+            email: Authorization.me.email,
+            socialSecurityNumber: Authorization.me.socialSecurityNumber,
+            birthDate: Authorization.me.birthDate,
+            gender: Authorization.me.gender
         };
     },
     mounted: function () {

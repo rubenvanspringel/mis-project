@@ -2,7 +2,7 @@ Vue.component('history-component', {
     template: `
 <div class="box box-primary">
     <div class="box-header">
-        <h1 class="box-title">Geschiedenis</h1>
+        <h1 class="box-title">Geschiedenis</h1> <verified-component></verified-component>
     </div>
     <div class="box-body">
         <ul class="timeline">
@@ -16,9 +16,9 @@ Vue.component('history-component', {
                     <i class="fa fa-envelope bg-blue"></i>
                     <div class="timeline-item">
                         <span class="time"><i class="fa fa-clock-o"></i>{{edit.editTime}}</span>
-            
+
                         <h3 class="timeline-header"><a href="#">{{edit.editBy}}</a></h3>
-            
+
                         <div class="timeline-body">
                             <p v-for="change in edit.changes">
                                 {{change.type}}: {{change.content}}
@@ -30,7 +30,7 @@ Vue.component('history-component', {
         </ul>
     </div>
     <div class="box-footer">
-        <button class="btn btn-primary btn-flat" v-on:click="goToHistory">Meer</button> 
+        <button class="btn btn-primary btn-flat" v-on:click="goToHistory">Meer</button>
     </div>
 </div>
 `,
@@ -43,7 +43,7 @@ Vue.component('history-component', {
         };
     },
     mounted: function(){
-    
+
     },
     methods: {
         goToHistory: function(){
