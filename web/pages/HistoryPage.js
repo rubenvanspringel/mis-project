@@ -18,14 +18,36 @@ Pages.HistoryPage = {
                             <h3 class="timeline-header"><a href="#">{{edit.editBy}}</a></h3>
                 
                             <div class="timeline-body">
-                                <p v-for="change in edit.changes">
-                                    {{change.type}}: {{change.content}}
-                                </p>
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        <p v-for="change in edit.changes">
+                                            {{change.type}}: {{change.content}}
+                                        </p>
+                                    </div>
+                                    <div class="pull-right">
+                                        <i class="fa fa-lock"></i> <a href="#" data-toggle="modal" data-target="#blockchainModal"> Verified by Blockchain</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </li>
                 </template>
             </ul>
+        </div>
+    </div>
+    <div class="modal fade" id="blockchainModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Blockchain informatie</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Blockchain informatie ...</p>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -38,5 +60,10 @@ Pages.HistoryPage = {
         this.history = Pages.state.history;
         
         $(window).trigger('resize');
+    },
+    methods: {
+        openBlockchainInformation: function(){
+            
+        }
     }
 };
