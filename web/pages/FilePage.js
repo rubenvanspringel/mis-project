@@ -84,9 +84,10 @@ Pages.FilePage = {
             </div>
             <div class="col-lg-4 col-xs-12">
                 <history-component v-bind:history="file.history"></history-component>
+                <circle-component v-bind:persons="5"></circle-component>
             </div>
         </div>
-        
+
     </section>
 </div>
 `
@@ -98,7 +99,7 @@ Pages.FilePage = {
     }, mounted: function () {
         this.file = Pages.state.file;
         this.dataLoaded = true;
-        
+
         setTimeout(function() {
             $('#creationDatePicker').datepicker({format: 'dd/mm/yyyy'});
             $('#lastConsultDatePicker').datepicker({format: 'dd/mm/yyyy'});

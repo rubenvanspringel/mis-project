@@ -19,14 +19,14 @@ Pages.PatientsPage = {
         return {
             patients: [
                 {
-                    firstname: "Alexander", lastname: "Drijkoningen", img: "web/img/user1-128x128.jpg",
+                    firstName: "Alexander", lastName: "Drijkoningen", img: "web/img/user1-128x128.jpg",
                     files: [
                 {
                     year: 2017, files: [
                         {
                             title: "Griep",
                             number: 123,
-                            creationDate: "21/12/2017", 
+                            creationDate: "21/12/2017",
                             lastConsult: "23/12/2017",
                             lastOpenedDate: "23/12/2017",
                             lastOpenedBy: "Joris Vliegen",
@@ -49,8 +49,8 @@ Pages.PatientsPage = {
                                 procedure: "Geruststelling, niets nodig"
                             }],
                             history: [
-                            {   editDate: "21/12/2017", 
-                                editTime: "12:05:05", 
+                            {   editDate: "21/12/2017",
+                                editTime: "12:05:05",
                                 editBy: "dr. Joris Vliegen",
                                 changes: [
                                     {
@@ -58,8 +58,8 @@ Pages.PatientsPage = {
                                         content: "Dossier aangemaakt"
                                     }]
                             },
-                            {   editDate: "23/12/2017", 
-                                editTime: "14:55:33", 
+                            {   editDate: "23/12/2017",
+                                editTime: "14:55:33",
                                 editBy: "dr. Joris Vliegen",
                                 changes: [
                                     {
@@ -68,36 +68,36 @@ Pages.PatientsPage = {
                                     }]
                             }
                             ]
-                        }, 
+                        },
                         {title: "Longontsteking", creationDate: "21/12/2017", lastConsult: "21/12/2017"}]
-                    
+
                 }, {
                     year: 2016, files: [{title: "Pijn Schouder", creationDate: "21/12/2017", lastConsult: "21/12/2017"}]
-                    
+
                 }]
-                }, 
+                },
                 {
-                    firstname: "Ben", lastname: "Segers", img: "web/img/user8-128x128.jpg",
-                    files: [{year: 2017, files: [{title: "Griep"}, {title: "Longontsteking"}]}, {year: 2016, files: [{title: "Pijn Schouder"}]}]
-                }, 
-                {
-                    firstname: "Laura", lastname: "Dussart", img: "web/img/user7-128x128.jpg",
+                    firstName: "Ben", lastName: "Segers", img: "web/img/user8-128x128.jpg",
                     files: [{year: 2017, files: [{title: "Griep"}, {title: "Longontsteking"}]}, {year: 2016, files: [{title: "Pijn Schouder"}]}]
                 },
                 {
-                    firstname: "Rob", lastname: "Vanoudenhove", img: "web/img/user6-128x128.jpg",
+                    firstName: "Laura", lastName: "Dussart", img: "web/img/user7-128x128.jpg",
                     files: [{year: 2017, files: [{title: "Griep"}, {title: "Longontsteking"}]}, {year: 2016, files: [{title: "Pijn Schouder"}]}]
                 },
                 {
-                    firstname: "Veerle", lastname: "Baetens", img: "web/img/user5-128x128.jpg",
+                    firstName: "Rob", lastName: "Vanoudenhove", img: "web/img/user6-128x128.jpg",
                     files: [{year: 2017, files: [{title: "Griep"}, {title: "Longontsteking"}]}, {year: 2016, files: [{title: "Pijn Schouder"}]}]
                 },
                 {
-                    firstname: "Nathalie", lastname: "Meskens", img: "web/img/user4-128x128.jpg",
+                    firstName: "Veerle", lastName: "Baetens", img: "web/img/user5-128x128.jpg",
                     files: [{year: 2017, files: [{title: "Griep"}, {title: "Longontsteking"}]}, {year: 2016, files: [{title: "Pijn Schouder"}]}]
                 },
                 {
-                    firstname: "Eva", lastname: "Spies", img: "web/img/user3-128x128.jpg",
+                    firstName: "Nathalie", lastName: "Meskens", img: "web/img/user4-128x128.jpg",
+                    files: [{year: 2017, files: [{title: "Griep"}, {title: "Longontsteking"}]}, {year: 2016, files: [{title: "Pijn Schouder"}]}]
+                },
+                {
+                    firstName: "Eva", lastName: "Spies", img: "web/img/user3-128x128.jpg",
                     files: [{year: 2017, files: [{title: "Griep"}, {title: "Longontsteking"}]}, {year: 2016, files: [{title: "Pijn Schouder"}]}]
                 },
                 ]

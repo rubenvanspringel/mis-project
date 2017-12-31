@@ -9,7 +9,7 @@ Vue.component('small-patient-info-component', {
         </div>
         <div class="media-body">
             <div class="clearfix">
-                <h4 style="margin-top: 0">{{patient.lastname + " " + patient.firstname}}</h4>
+                <h4 style="margin-top: 0">{{patient.lastName + " " + patient.firstName}}</h4>
                 <p>{{patient.birthDate}} - {{patient.gender}}</p>
                 <p>{{patient.address}}</p>
                 <p>{{patient.socialSecurityNumber}}</p>
