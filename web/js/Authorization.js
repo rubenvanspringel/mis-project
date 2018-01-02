@@ -32,7 +32,7 @@ Authorization.login = function(email, password) {
             doctor: false
         };
     }
-    Pages.goToPage("homepage");
+    Pages.goToPage("personal");
     $("body").addClass("skin-blue-light");
 };
 

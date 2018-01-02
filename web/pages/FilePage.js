@@ -54,7 +54,7 @@ Pages.FilePage = {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-for="consult in file.consults">
+                                        <tr v-for="consult in file.consults" class="clickable" @click="openConsultation(consult)">
                                             <td>{{consult.date}}</td>
                                             <td>{{consult.reason}}</td>
                                             <td>{{consult.observations}}</td>
@@ -81,13 +81,14 @@ Pages.FilePage = {
                         </div>
                     </div>
                 </div>
+                
+                <button class="btn btn-primary btn-flat" @click="back">Terug</button>
             </div>
             <div class="col-lg-4 col-xs-12">
                 <history-component v-bind:history="file.history"></history-component>
                 <circle-component v-bind:persons="5"></circle-component>
             </div>
         </div>
-
     </section>
 </div>
 `
@@ -109,6 +110,12 @@ Pages.FilePage = {
     }, methods:{
         newConsult: function(){
             Pages.goToPage("consult");
+        },
+        openConsultation: function(consult){
+            Pages.goToPage("consult", {consult: consult})
+        },
+        back: function(){
+            Pages.goBack();
         }
     }
 };
