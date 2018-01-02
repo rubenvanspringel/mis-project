@@ -42,13 +42,32 @@ Pages.ConsultationPage = {
                     </div>
                     <div class="box-footer">
                         <button class="btn btn-primary btn-flat" @click="cancel">Annuleer</button>
-                        <button v-if="!existingConsult" class="btn btn-primary btn-flat" @click="addNew">Toevoegen</button>
+                        <button v-if="!existingConsult" data-toggle="modal" data-target="#nothingDeletedModal" class="btn btn-primary btn-flat">Toevoegen</button>
                         <button v-else class="btn btn-primary btn-flat" @click="editExisting">Aanpassen</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal modal-danger fade" id="nothingDeletedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Opgelet!</h4>
+          </div>
+          <div class="modal-body">
+            De veiligheid van een blockchain wordt gegarandeerd doordat elke aanpassing bewaart blijft en later kan opgevraagt worden. Hierdoor is het niet mogelijk om later deze informatie defenitief te verwijderen.
+          </div>
+          <div class="modal-footer">
+                <button type="button" class="btn btn-outline  pull-left" data-dismiss="modal" @click="addNew">Opslaan</button>
+                <button type="button" class="btn btn-outline" data-dismiss="modal">Sluiten</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
 `
     , data: function () {
@@ -69,7 +88,7 @@ Pages.ConsultationPage = {
                 this.consult = Pages.state.consult;
             }
         }
-        
+
         setTimeout(function(){
             $("#consultDatePicker").datepicker({format: 'dd/mm/yyyy'});
         }, 100);
