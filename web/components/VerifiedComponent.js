@@ -5,7 +5,7 @@ Vue.component('verified-component', {
     <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#explainBlockchainModal">Why?</button>
 
     <!-- Modal -->
-    <div class="modal modal-warning fade" id="explainBlockchainModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal modal-default fade" id="explainBlockchainModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -16,7 +16,7 @@ Vue.component('verified-component', {
             <img src="web/img/blockchain_info.png" alt="blockchain info" class="center-block" />
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
