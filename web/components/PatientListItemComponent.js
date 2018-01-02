@@ -2,7 +2,7 @@ Vue.component('patient-listitem-component', {
     template: `
 <li class="clickable" v-on:click="goToPatient">
   <img :src="patient.img" alt="User Image">
-  <a class="users-list-name" href="#">{{patient.firstname + " " + patient.lastname}}</a>
+  <a class="users-list-name" href="#">{{patient.firstName + " " + patient.lastName}}</a>
   <!-- <span class="users-list-date">Today</span> -->
 </li>
 `,

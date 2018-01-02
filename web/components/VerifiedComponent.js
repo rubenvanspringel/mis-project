@@ -6,18 +6,17 @@ Vue.component('verified-component', {
 
     <!-- Modal -->
     <div class="modal modal-warning fade" id="explainBlockchainModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            <h4 class="modal-title" id="myModalLabel">Blockchain</h4>
           </div>
           <div class="modal-body">
-            Blockchain... Perfect! :D
+            <img src="web/img/blockchain_info.png" alt="blockchain info" class="center-block" />
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-warning">Save changes</button>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ Vue.component('circle-component', {
     <div class="box-body" id="circleBoxBody">
         <svg v-bind:height="width" v-bind:width="width">
             <circle v-bind:cx="width/2" v-bind:cy="width/2" v-bind:r="(width/2)*widthFactorInnerRing" stroke="green" stroke-width="8" fill="white" />
-            <circle v-for="i in persons" stroke="#CCC" v-bind:cx="xCoordinates[i]" v-bind:cy="yCoordinates[i]" v-bind:r="(width/2)*sizeFactorPhotos*widthFactorInnerRing/5" stroke-width="6" fill="black" />
+            <circle v-for="i in persons" stroke="#CCC" v-bind:cx="xCoordinates[i]" v-bind:cy="yCoordinates[i]" v-bind:r="(width/2)*sizeFactorPhotos*widthFactorInnerRing/5" stroke-width="6" fill="white" />
         </svg>
     </div>
 </div>
