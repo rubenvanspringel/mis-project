@@ -2,7 +2,7 @@ Vue.component('circle-component', {
     template: `
 <div class="box box-primary">
     <div class="box-header">
-        <h1 class="box-title">Wie kan jou dosier zien?</h1> <verified-component></verified-component>
+        <h1 class="box-title">Wie heeft toegang tot dit dossier?</h1> <verified-component></verified-component>
     </div>
     <div class="box-body" id="circleBoxBody">
         <svg v-bind:height="width" v-bind:width="width">

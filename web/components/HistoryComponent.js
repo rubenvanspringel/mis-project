@@ -6,14 +6,14 @@ Vue.component('history-component', {
     </div>
     <div class="box-body">
         <ul class="timeline">
-            <template v-for="edit in history">
+            <template v-for="edit in historyForHistoryComponent">
                 <li class="time-label">
                     <span class="bg-red">
                         {{edit.editDate}}
                     </span>
                 </li>
                 <li>
-                    <i class="fa fa-envelope bg-blue"></i>
+                    <i class="fa fa-heartbeat bg-blue"></i>
                     <div class="timeline-item">
                         <span class="time"><i class="fa fa-clock-o"></i>{{edit.editTime}}</span>
 
@@ -39,11 +39,11 @@ Vue.component('history-component', {
     ],
     data: function() {
         return {
-
+            historyForHistoryComponent: null
         };
     },
     mounted: function(){
-
+        this.historyForHistoryComponent = this.history.slice(0,3);
     },
     methods: {
         goToHistory: function(){

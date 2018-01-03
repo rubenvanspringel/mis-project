@@ -12,7 +12,7 @@ Pages.HistoryPage = {
                             </span>
                         </li>
                         <li>
-                            <i class="fa fa-envelope bg-blue"></i>
+                            <i class="fa fa-heartbeat bg-blue"></i>
                             <div class="timeline-item">
                                 <span class="time"><i class="fa fa-clock-o"></i>{{edit.editTime}}</span>
                     
@@ -26,7 +26,8 @@ Pages.HistoryPage = {
                                             </p>
                                         </div>
                                         <div class="pull-right">
-                                            <i class="fa fa-lock"></i> <a href="#" data-toggle="modal" data-target="#blockchainModal"> Verified by Blockchain</a>
+                                            <verified-component></verified-component>
+                                            <!--<i class="fa fa-lock"></i> <a href="#" data-toggle="modal" data-target="#blockchainModal"> Verified by Blockchain</a>-->
                                         </div>
                                     </div>
                                 </div>
